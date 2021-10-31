@@ -88,7 +88,10 @@ export abstract class Project implements ProjectParams {
     closeBtn.type = 'button'
     refreshBtn.type = 'button'
     closeBtn.addEventListener('click', onClose)
-    if (onRefresh) refreshBtn.addEventListener('click', onRefresh)
+    refreshBtn.addEventListener('click', (e: MouseEvent) => {
+      if (onRefresh) onRefresh()
+      this.refresh()
+    })
     container.appendChild(closeBtn)
     container.appendChild(this.nameHeading)
     container.appendChild(this.canvas)
@@ -112,4 +115,6 @@ export abstract class Project implements ProjectParams {
     this.render()
     return this.canvas.toDataURL()
   }
+
+  public refresh (): void {}
 }
