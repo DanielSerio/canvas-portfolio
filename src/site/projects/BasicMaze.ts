@@ -167,4 +167,10 @@ export default class BasicMaze extends StaticProject {
       })
     }
   }
+
+  public override refresh (): void {
+    this.data = []
+    this.onCreate()
+    this.render()
+  }
 }

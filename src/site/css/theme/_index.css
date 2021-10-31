@@ -7,3 +7,16 @@ body {
   background-color: var(--green);
   color: white;
 }
+
+.root.blurred {
+  filter: blur(8px);
+}
+
+.root {
+  transition: filter 0.2s ease-in-out;
+}
+
+.modal {
+  background: rgba(0,0,0,0.6);
+  transition: all 0.2s ease-in-out;
+}

@@ -104,7 +104,7 @@ export abstract class Project implements ProjectParams {
     const container = createElement('div', { className: 'presentation' })
     const closeBtn = createElement('button', { className: 'close-btn' }) as HTMLButtonElement
     const refreshBtn = createElement('button', { className: 'refresh-btn' }) as HTMLButtonElement
-    closeBtn.innerText = 'x'
+    closeBtn.innerText = '✖'
     refreshBtn.innerText = 'Refresh'
     closeBtn.type = 'button'
     refreshBtn.type = 'button'
