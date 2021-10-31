@@ -53,6 +53,7 @@ export abstract class Project implements ProjectParams {
     this.thumbNameSpan = this.createThumbNameSpan()
     this.descPara = this.createDescPara()
     this.nameHeading = this.createNameHeading()
+    this.render()
   }
 
   private createThumbNameSpan = (): HTMLSpanElement => {
@@ -72,6 +73,26 @@ export abstract class Project implements ProjectParams {
     const p = createElement('p', { className: 'desc' }) as HTMLParagraphElement
     p.innerText = this.desc
     return p
+  }
+
+  protected save = (cb: () => void): void => {
+    this.ctx.save()
+    cb()
+    this.ctx.restore()
+  }
+
+  protected drawPath = (cb: () => void): void => {
+    this.ctx.beginPath()
+    cb()
+    this.ctx.closePath()
+  }
+
+  protected clear = (): void => {
+    this.save(() => {
+      const { width, height } = this.canvas
+      this.ctx.translate(0, 0)
+      this.ctx.clearRect(0, 0, width, height)
+    })
   }
 
   private resize = () => {
@@ -101,9 +122,13 @@ export abstract class Project implements ProjectParams {
   }
 
   public get thumbnailLi (): HTMLLIElement {
+    const image = new Image()
+    image.src = this.thumbBackgroundURL
+    image.onload = function () {
+      li.style.backgroundImage = `url(${image.src})`
+    }
     const li = createElement('li', { className: 'project-list-item', data: { id: this.id } }) as HTMLLIElement
     li.style.backgroundOrigin = 'center center'
-    li.style.backgroundImage = this.thumbBackgroundURL
     li.style.backgroundSize = 'cover'
     li.appendChild(this.thumbNameSpan)
     return li
