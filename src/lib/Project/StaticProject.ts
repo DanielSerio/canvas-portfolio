@@ -1,4 +1,4 @@
-import { Project, ProjectOptions, ProjectType } from '.'
+import { Project, ProjectType } from '.'
 
 export abstract class StaticProject extends Project {
   public type: ProjectType = ProjectType.STATIC
