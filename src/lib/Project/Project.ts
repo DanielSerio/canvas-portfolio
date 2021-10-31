@@ -40,6 +40,12 @@ export abstract class Project implements ProjectParams {
 
   constructor (options: ProjectOptions) {
     Object.assign(this, options)
+    this.resize()
+  }
+
+  private resize = () => {
+    this.canvas.height = this.size
+    this.canvas.width = this.size
   }
 
   public render (): void {}
