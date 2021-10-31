@@ -17,6 +17,8 @@
     ],
     "rules": {
         "linebreak-style": "off",
-        "indent": "off"
+        "indent": "off",
+        "no-undef": "off",
+        "no-unused-vars": "off"
     }
 }
