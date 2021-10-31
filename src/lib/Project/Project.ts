@@ -1,4 +1,5 @@
 import { createElement, randString } from '../utils'
+import Colors from './Colors'
 
 export type Context = CanvasRenderingContext2D
 
@@ -37,6 +38,7 @@ export type ProjectParams = ProjectOptions & ProjectAttrs
 
 export abstract class Project implements ProjectParams {
   public id: string = randString()
+  public colors: Colors = new Colors()
   public canvas: HTMLCanvasElement = createElement('canvas', { className: 'canvas', id: this.id }) as HTMLCanvasElement
   public ctx: Context = this.canvas.getContext('2d') as Context
   public type!: ProjectType
