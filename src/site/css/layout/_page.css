@@ -1,0 +1,41 @@
+html,
+body,
+.root,
+.modal {
+  height: 100%;
+  width: 100%;
+}
+
+body,
+.modal { overflow: hidden; }
+
+.modal.closed { 
+  height: 0;
+  z-index: -999; 
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.root > .content { flex: 1; }
+
+.root > .footer h2 {
+  font-size: 0.8999rem;
+  font-weight: 200;
+}
+
+.header { padding-top: 2rem; }
+
+.header,
+.footer { text-align: center; }

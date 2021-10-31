@@ -1,0 +1,21 @@
+input,
+button {
+  appearance: none;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 2;
+  padding: 0 2ch;
+  background: transparent;
+  color: inherit;
+}
+
+button {
+  text-align: center;
+  font-weight: 700;
+  border: none;
+}
+
+input {
+  border: 1px solid;
+}
