@@ -20,3 +20,20 @@ body {
   background: rgba(0,0,0,0.6);
   transition: all 0.2s ease-in-out;
 }
+
+.project-list-item,
+.project-list-item span { transition: all 0.1s linear; }
+
+.project-list-item:hover {
+  box-shadow: 0 0 12px -2px var(--grey-75);
+  border-color: var(--green);
+  cursor: pointer;
+  transform: scale(1.05);
+  border-width: 3px;
+  transform-origin: center center;
+}
+
+.project-list-item:hover  span {
+  background: var(--green);
+  color: var(--white);
+}
