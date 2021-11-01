@@ -14,6 +14,6 @@ export default class Colors {
       this.purple
     ]
 
-    return colors[Math.floor(Math.random())]
+    return colors[Math.round(Math.random())]
   }
 }

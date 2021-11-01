@@ -153,6 +153,7 @@ export default class BasicMaze extends StaticProject {
         })
       })
     }
+    this.ctx.strokeStyle = this.colors.purple
     if (cell.walls.top) renderTop()
     if (cell.walls.right) renderRight()
     if (cell.walls.bottom) renderBottom()
