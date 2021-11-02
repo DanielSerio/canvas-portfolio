@@ -1,7 +1,6 @@
 {
   "name": "canvas-portfolio",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^27.0.2",
@@ -20,6 +19,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "parcel ./src/site/index.html"
+    "start": "parcel ./src/site/index.html",
+    "build": "parcel build ./src/site/index.html"
   }
 }
