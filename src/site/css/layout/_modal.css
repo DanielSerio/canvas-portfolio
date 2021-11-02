@@ -8,6 +8,7 @@
   border: 1px solid black;
   border-radius: 2px;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .modal .close-btn {
@@ -18,4 +19,17 @@
   line-height: 1;
   right: 0.3ch;
   text-shadow: 0 0 1px black;
+}
+
+.modal .desc { 
+  max-width: 65ch; 
+  text-align: center;
+  margin: 0 auto;
+}
+
+.modal .start-btn,
+.modal .refresh-btn {
+  border: 2px solid var(--white);
+  margin: 1rem 0;
+  cursor: pointer;
 }

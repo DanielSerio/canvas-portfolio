@@ -7,10 +7,3 @@ const root: HTMLDivElement = document.getElementById('root') as HTMLDivElement
 const content: HTMLDivElement = document.getElementById('content') as HTMLDivElement
 const modal: HTMLDivElement = document.getElementById('modal') as HTMLDivElement
 const app: Application = new Application(root, content, modal, projects)
-/*
-modal.addEventListener('click', () => {
-  app._activeProjectId = null
-  app.toggleViewport()
-})
-*/
-console.log(app)
