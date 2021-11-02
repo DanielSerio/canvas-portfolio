@@ -20,6 +20,6 @@
   "scripts": {
     "test": "jest",
     "start": "parcel ./src/site/index.html",
-    "build": "parcel build ./src/site/index.html"
+    "build": "parcel build ./src/site/index.html --public-url ./"
   }
 }
