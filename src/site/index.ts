@@ -1,5 +1,4 @@
 /* eslint-disable dot-notation */
-import { createElement } from '../lib'
 import Application from '../lib/Application'
 import projects from './projects'
 
